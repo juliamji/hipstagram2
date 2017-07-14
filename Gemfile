@@ -33,8 +33,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'haml'
 gem 'paperclip'
 gem 'simple_form'
+
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sprockets-rails'
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
