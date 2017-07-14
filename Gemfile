@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'haml'
 gem 'paperclip'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
