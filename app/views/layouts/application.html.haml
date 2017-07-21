@@ -1,6 +1,7 @@
 !!!
 
 %html
+
   %nav.navbar.navbar-default
   .navbar-container
     .navbar-header
@@ -27,6 +28,10 @@
 
     = csrf_meta_tags
 
+
   %body
+    .container
+    -flash.each do |name, msg|
+      = content_tag :div, msg, class: [:alert, alert_for(name)]
     = yield
 
