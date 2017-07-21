@@ -36,8 +36,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
-    redirect_to posts_path
+    if @post.destroy
+      flash[:success] = 'Post deleted'
+      redirect_to posts_path
+    else
+      flash.now[:alert] = 'Post not deleted. Please try again.'
+      render :edit
+    end
   end
 
   private
