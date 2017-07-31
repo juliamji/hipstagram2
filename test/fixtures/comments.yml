@@ -3,9 +3,9 @@
 one:
   user: one
   post: one
-  context: MyText
+  content: MyText
 
 two:
   user: two
   post: two
-  context: MyText
+  content: MyText

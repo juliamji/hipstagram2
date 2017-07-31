@@ -6,18 +6,19 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      flash[:success] = 'Comment glory is yours!'
+      flash[:success] = "You commented the hell out of that post!"
       redirect_to :back
     else
-      flash[:alert] = 'Something went wrong. Check the form.'
+      flash[:alert] = "Check the comment form, something went horribly wrong."
       render root_path
     end
   end
 
   def destroy
     @comment = @post.comments.find(params[:id])
+
     @comment.destroy
-    flash[:success] = 'Comment deleted'
+    flash[:success] = "Comment deleted :("
     redirect_to root_path
   end
 
