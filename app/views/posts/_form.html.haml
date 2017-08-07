@@ -1,8 +1,17 @@
-.form-wrapper
-  = simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
-    .form-group
-      = f.input :image
-    .form-group.text-center
-      = f.input :caption
-    .form-group.text-center
-      = f.button :submit, class: 'btn-success'
+.posts-wrapper
+  .post
+    .post-body
+      .image-wrap
+        = image_tag 'farhan-siddicq-163846.jpg', id: 'image-preview', class: 'img-responsive'
+        = simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
+          .row
+            .col-md-12.text-center
+              = f. error_notification
+            .container-fluid
+              .form-group.text-center
+                %h4 Upload an image (required):
+                = f.input :image, label: false, input_html: { onChange: 'loadFile(event)'}
+              .form-group.text-center
+                = f.input :caption, lablel: false, placeholder: 'Your caption here'
+              .form-group.text-center
+                = f.button :submit, class: 'btn-success btn-block'
