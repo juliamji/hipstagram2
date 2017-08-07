@@ -58,6 +58,16 @@ html {
   border: none;
 }
 
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('delf-renniel-rivera-273007.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .panel {
   border-radius: 8px;
 }
