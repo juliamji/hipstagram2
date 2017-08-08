@@ -32,11 +32,13 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
 gem 'haml'
+gem 'kaminari'
 gem 'paperclip'
 gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sprockets-rails'
+
 
 
 # Use Capistrano for deployment
