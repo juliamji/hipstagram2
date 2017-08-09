@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
 gem 'haml'
+gem 'jquery-turbolinks'
 gem 'kaminari'
 gem 'paperclip'
 gem 'simple_form'
