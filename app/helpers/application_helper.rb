@@ -13,4 +13,8 @@ module ApplicationHelper
                      class: 'img-responsive' if post.image.exists?
     image_tag 'farhan-siddicq-163846.jpg', id: 'image-preview', class: 'img-responsive'
   end
+
+  def profile_avatar_select(user)
+
+  end
 end
