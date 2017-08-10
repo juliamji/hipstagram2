@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :authenticate
+  before_action :authenticate_user!
   before_action :owned_profile, only: [:edit, :update]
   before_action :set_user
 
