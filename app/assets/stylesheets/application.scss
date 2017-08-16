@@ -2,9 +2,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.alert {
+  margin-bottom: 0px;
 }
 
 /* ## NAVBAR CUSTOMISATIONS ## */
@@ -13,9 +22,6 @@ body {
   margin-bottom: 0px;
 }
 
-.alert {
-  margin-bottom: 0px;
-}
 .navbar-brand {
   a {
     color: #125688;
@@ -24,58 +30,14 @@ body {
 
 .navbar-default {
   background-color: #fff;
-  height: 54px;
   .navbar-nav li a {
     color: #125688;
   }
 }
 
 .navbar-container {
-  width: 70%;
+  max-width: 640px;
   margin: 0 auto;
-}
-
-//register form styling
-
-html {
-  height: 100%;
-}
-
-.registration-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: image-url('luisa-rusche-2016.jpg');
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  border: none;
-}
-
-.login-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: image-url('delf-renniel-rivera-273007.jpg');
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.panel {
-  border-radius: 8px;
-}
-
-.panel-heading{
-  h1 {
-    text-align: center;
-  }
 }
 
 /* ## POST CUSTOMISATIONS ## */
@@ -118,14 +80,6 @@ html {
     border-bottom: 1px solid #eeefef;
     border-top: 1px solid #eeefef;
   }
-  #image-preview {
-    margin: 0px auto;
-  }
-
-  #post_image {
-    padding: 1em;
-    margin: 0px auto;
-  }
 }
 
 .post-bottom {
@@ -137,7 +91,6 @@ html {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
     color: #125688;
     font-size: 15px;
   }
@@ -156,21 +109,11 @@ html {
     }
   }
   margin-bottom: 7px;
-  padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 10px;
   font-size: 15px;
   line-height: 18px;
-}
-
-.comments {
-  .paginator {
-    margin: 0.5em;
-    .more-comments {
-      color: #A5A7AA;
-    }
-  }
 }
 
 .comment_content {
@@ -193,21 +136,59 @@ html {
   justify-content: center;
 }
 
-/* ## Wrapper and styling for the new and edit views ## */
-
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
-}
+/* ## Wrapper and styling for the new, edit & devise views ## */
 
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('luisa-rusche-2016.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('delf-renniel-rivera-273007.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+#image-preview {
+  margin: 0 auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
 
 #paginator {
   color: #4090DB;
@@ -235,8 +216,18 @@ html {
   }
 }
 
-#user_avatar {
-  margin: 20px auto;
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
+.comment-submit-button {
+  position: absolute;
+  left: -9999px;
 }
 
 .profile-header {
@@ -265,4 +256,18 @@ html {
 
 .profile-bio {
   margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
 }
